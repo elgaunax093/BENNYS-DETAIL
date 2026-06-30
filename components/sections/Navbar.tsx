@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
-import { Menu, X, CalendarDays, Phone } from 'lucide-react'
+import { Menu, X, Phone } from 'lucide-react'
 
 const links = [
   { label: 'Inicio', href: '#inicio' },
@@ -79,7 +79,7 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Desktop CTAs: teléfono + WhatsApp + Instagram + Reservar */}
+          {/* Desktop CTAs: teléfono + WhatsApp + Instagram + Llamar ahora */}
           <div className="hidden md:flex items-center gap-3 shrink-0">
             <a
               href="tel:+34603768714"
@@ -107,13 +107,11 @@ export default function Navbar() {
               <InstagramIcon size={17} />
             </a>
             <a
-              href="https://bennysautodetail.booksy.com/ig"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="tel:+34603768714"
               className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gold text-background text-sm font-semibold hover:bg-gold-light hover:shadow-[0_0_20px_rgba(201,168,106,0.3)] transition-all duration-300"
             >
-              <CalendarDays size={15} />
-              Reservar cita
+              <Phone size={15} />
+              Llamar ahora
             </a>
           </div>
 
@@ -157,12 +155,11 @@ export default function Navbar() {
               transition={{ delay: 0.4 }}
             >
               <a
-                href="https://bennysautodetail.booksy.com/ig"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-3 rounded-full bg-gold text-background font-semibold text-lg"
+                href="tel:+34603768714"
+                className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gold text-background font-semibold text-lg"
               >
-                Reservar cita
+                <Phone size={18} />
+                Llamar ahora
               </a>
               <div className="flex items-center gap-5 mt-1">
                 <a href="tel:+34603768714" className="flex items-center gap-2 text-muted hover:text-foreground transition-colors text-sm">

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Phone, MapPin, CalendarDays } from 'lucide-react'
+import { Phone, MapPin } from 'lucide-react'
 
 function WhatsAppIcon({ size = 15 }: { size?: number }) {
   return (
@@ -112,12 +112,10 @@ export default function Footer() {
             </a>
           </div>
           <a
-            href="https://bennysautodetail.booksy.com/ig"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="tel:+34603768714"
             className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gold text-background text-xs font-semibold hover:bg-gold-light transition-all"
           >
-            <CalendarDays size={13} /> Reservar cita
+            <Phone size={13} /> Llamar ahora
           </a>
         </div>
 

@@ -1,7 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { Phone, CalendarDays, Star } from 'lucide-react'
+import { Phone, Star } from 'lucide-react'
 
 function WhatsAppIcon({ size = 16 }: { size?: number }) {
   return (
@@ -76,35 +76,24 @@ export default function HeroSection() {
           transition={{ delay: 1.3, duration: 0.5 }}
         >
           <motion.a
-            href="https://bennysautodetail.booksy.com/ig"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="tel:+34603768714"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gold text-background font-semibold text-sm hover:bg-gold-light hover:shadow-[0_0_30px_rgba(201,168,106,0.35)] transition-all duration-300"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >
-            <CalendarDays size={16} />
-            Reservar cita
-          </motion.a>
-          <motion.a
-            href="tel:+34603768714"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-gold/30 text-foreground backdrop-blur-md bg-white/5 font-semibold text-sm hover:border-gold hover:bg-white/10 hover:shadow-[0_0_20px_rgba(201,168,106,0.15)] transition-all duration-300"
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-          >
             <Phone size={16} />
-            603 76 87 14
+            Llamar ahora
           </motion.a>
           <motion.a
             href="https://wa.me/34603768714"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="WhatsApp"
-            className="inline-flex items-center justify-center w-14 h-14 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366]/20 hover:border-[#25D366]/70 transition-all duration-300"
-            whileHover={{ scale: 1.05 }}
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-gold/30 text-foreground backdrop-blur-md bg-white/5 font-semibold text-sm hover:border-gold hover:bg-white/10 hover:shadow-[0_0_20px_rgba(201,168,106,0.15)] transition-all duration-300"
+            whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >
-            <WhatsAppIcon size={24} />
+            <WhatsAppIcon size={16} />
+            Escríbenos por WhatsApp
           </motion.a>
         </motion.div>
 

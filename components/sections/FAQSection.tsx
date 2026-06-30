@@ -7,7 +7,7 @@ import SectionHeading from '../ui/SectionHeading'
 const faqs = [
   {
     q: '¿Necesito cita previa?',
-    a: 'Sí, recomendamos reservar cita previa a través de nuestra plataforma Booksy o llamándonos directamente al 603 76 87 14 para garantizar disponibilidad. También puedes escribirnos por WhatsApp.',
+    a: 'Sí, recomendamos pedir cita previa llamándonos al 603 76 87 14 o escribiéndonos por WhatsApp para garantizar disponibilidad.',
   },
   {
     q: '¿Hacen recogida a domicilio?',

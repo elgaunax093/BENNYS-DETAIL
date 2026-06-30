@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { MapPin, Phone, Clock, MessageCircle, Send, CalendarDays } from 'lucide-react'
+import { MapPin, Phone, Clock, MessageCircle, Send } from 'lucide-react'
 import SectionHeading from '../ui/SectionHeading'
 
 const horario = [
@@ -210,16 +210,25 @@ export default function ContactoSection() {
               </table>
             </div>
 
-            {/* CTA Booksy */}
-            <a
-              href="https://bennysautodetail.booksy.com/ig"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 rounded-xl border border-gold/30 bg-gold/5 py-4 text-sm font-semibold text-gold hover:bg-gold/10 hover:border-gold/50 transition-all"
-            >
-              <CalendarDays size={15} />
-              Reservar cita online
-            </a>
+            {/* CTAs contacto directo */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="tel:+34603768714"
+                className="flex-1 flex items-center justify-center gap-2 rounded-xl bg-gold text-background py-4 text-sm font-semibold hover:bg-gold-light hover:shadow-[0_0_24px_rgba(201,168,106,0.3)] transition-all"
+              >
+                <Phone size={15} />
+                Llamar ahora
+              </a>
+              <a
+                href="https://wa.me/34603768714"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 rounded-xl border border-[#25D366]/40 text-[#25D366] py-4 text-sm font-semibold hover:bg-[#25D366]/10 hover:border-[#25D366]/70 transition-all"
+              >
+                <MessageCircle size={15} />
+                Escríbenos por WhatsApp
+              </a>
+            </div>
           </motion.div>
         </div>
 

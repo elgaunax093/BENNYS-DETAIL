@@ -81,8 +81,8 @@ export default function NosotrosSection() {
           >
             <div className="relative rounded-2xl overflow-hidden border border-gold/20 shadow-[0_0_60px_rgba(201,168,106,0.1)]">
               <Image
-                src="/images/porsche-volante-interior.jpg"
-                alt="Volante e interior Porsche tras detailing interior"
+                src="/images/limpieza-integral.jpg"
+                alt="Proceso de detailing integral en Benny's Auto Detail"
                 width={700}
                 height={500}
                 className="object-cover w-full"
