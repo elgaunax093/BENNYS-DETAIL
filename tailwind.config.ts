@@ -1,18 +1,6 @@
 import type { Config } from 'tailwindcss'
 
-// Permite que los tokens de Tailwind respondan al tema activo y sigan
-// aceptando modificadores de opacidad, ej. bg-gold/50
-function withOpacity(varName: string) {
-  return ({ opacityValue }: { opacityValue?: string }) =>
-    opacityValue !== undefined
-      ? `rgb(var(${varName}) / ${opacityValue})`
-      : `rgb(var(${varName}))`
-}
-
-// Tailwind soporta colores como función para el patrón de variables CSS con
-// opacidad (ver docs oficiales), pero el tipo `Config` no lo modela — se
-// castea al exportar en vez de tipar aquí para no perder el resto del chequeo.
-const config = {
+const config: Config = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -20,26 +8,26 @@ const config = {
   theme: {
     extend: {
       colors: {
-        bg: withOpacity('--bg-page'),
-        'bg-secondary': withOpacity('--bg-card'),
-        carbon: withOpacity('--bg-surface'),
-        'text-primary': withOpacity('--text-primary'),
-        'text-muted': withOpacity('--text-muted'),
-        blue: withOpacity('--accent-blue'),
-        gold: withOpacity('--accent-gold'),
-        whatsapp: '#25D366',
+        background: '#0A0A0A',
+        surface: '#141414',
+        'surface-light': '#1C1C1C',
+        gold: '#C9A86A',
+        'gold-light': '#E4CC9F',
+        'gold-dark': '#8C7340',
+        foreground: '#F5F3EF',
+        muted: '#8A8A8A',
       },
       fontFamily: {
-        display: ['"Bebas Neue"', 'cursive'],
-        body: ['Inter', 'sans-serif'],
+        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        sans: ['Inter', 'sans-serif'],
       },
-      letterSpacing: {
-        display: '0.05em',
-        label: '0.12em',
+      backgroundImage: {
+        'gold-gradient': 'linear-gradient(to right, #E4CC9F, #C9A86A)',
+        'gold-gradient-b': 'linear-gradient(to bottom, #F5F3EF, #8A8A8A)',
       },
     },
   },
   plugins: [],
 }
 
-export default config as unknown as Config
+export default config

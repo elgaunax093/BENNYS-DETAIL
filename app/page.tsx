@@ -1,31 +1,29 @@
-import Navbar from '@/components/Navbar'
-import HeroSection from '@/components/HeroSection'
-import ValorSection from '@/components/ValorSection'
-import ServiciosSection from '@/components/ServiciosSection'
-import GallerySection from '@/components/GallerySection'
-import ResenasSection from '@/components/ResenasSection'
-import AntesDepuesSection from '@/components/AntesDepuesSection'
-import ProcesoSection from '@/components/ProcesoSection'
-import MarqueeSection from '@/components/MarqueeSection'
-import NosotrosSection from '@/components/NosotrosSection'
-import FAQSection from '@/components/FAQSection'
-import ContactoSection from '@/components/ContactoSection'
-import Footer from '@/components/Footer'
-import FloatingWhatsApp from '@/components/FloatingWhatsApp'
+import Navbar from '@/components/sections/Navbar'
+import HeroSection from '@/components/sections/HeroSection'
+import StatsBar from '@/components/sections/StatsBar'
+import MarcasBar from '@/components/sections/MarcasBar'
+import ServiciosSection from '@/components/sections/ServiciosSection'
+import PortfolioSection from '@/components/sections/PortfolioSection'
+import NosotrosSection from '@/components/sections/NosotrosSection'
+import ResenasSection from '@/components/sections/ResenasSection'
+import ComparativaSection from '@/components/sections/ComparativaSection'
+import FAQSection from '@/components/sections/FAQSection'
+import ContactoSection from '@/components/sections/ContactoSection'
+import Footer from '@/components/sections/Footer'
+import FloatingWhatsApp from '@/components/ui/FloatingWhatsApp'
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main>
+    <main className="bg-background text-foreground">
       <Navbar />
       <HeroSection />
-      <ValorSection />
+      <StatsBar />
+      <MarcasBar />
       <ServiciosSection />
-      <GallerySection />
-      <ResenasSection />
-      <AntesDepuesSection />
-      <ProcesoSection />
-      <MarqueeSection />
+      <PortfolioSection />
       <NosotrosSection />
+      <ResenasSection />
+      <ComparativaSection />
       <FAQSection />
       <ContactoSection />
       <Footer />
