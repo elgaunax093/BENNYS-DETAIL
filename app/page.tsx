@@ -6,7 +6,6 @@ import ServiciosSection from '@/components/sections/ServiciosSection'
 import PortfolioSection from '@/components/sections/PortfolioSection'
 import NosotrosSection from '@/components/sections/NosotrosSection'
 import ResenasSection from '@/components/sections/ResenasSection'
-import ComparativaSection from '@/components/sections/ComparativaSection'
 import FAQSection from '@/components/sections/FAQSection'
 import ContactoSection from '@/components/sections/ContactoSection'
 import Footer from '@/components/sections/Footer'
@@ -23,7 +22,6 @@ export default function HomePage() {
       <PortfolioSection />
       <NosotrosSection />
       <ResenasSection />
-      <ComparativaSection />
       <FAQSection />
       <ContactoSection />
       <Footer />

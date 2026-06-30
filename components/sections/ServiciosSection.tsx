@@ -133,12 +133,10 @@ export default function ServiciosSection() {
                 Reservar cita
               </a>
               <a
-                href="https://wa.me/34603768714"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#contacto"
                 className="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-gold/40 text-foreground text-sm hover:border-gold transition-all"
               >
-                WhatsApp
+                Pedir presupuesto
               </a>
             </div>
           </motion.div>
