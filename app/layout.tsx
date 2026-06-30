@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://bennys-autodetail.netlify.app'),
   title: "Benny's Auto Detail | Detailing, Mecánica y Personalización en Vitoria-Gasteiz",
   description:
     'Centro integral de detailing, mecánica rápida y personalización de vehículos en Vitoria-Gasteiz. Limpieza premium, mantenimiento y reformas a medida para tu coche.',
