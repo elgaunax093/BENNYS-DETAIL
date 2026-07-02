@@ -1,7 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
-import { Home, Award, Car, Stethoscope, Star, Camera } from 'lucide-react'
+import { Home, Car, Stethoscope, Star, Camera } from 'lucide-react'
 import SectionHeading from '../ui/SectionHeading'
 
 const features = [
@@ -17,7 +16,7 @@ export default function NosotrosSection() {
   return (
     <section id="nosotros" className="py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-3xl mx-auto">
           {/* Text */}
           <div>
             <SectionHeading
@@ -70,31 +69,6 @@ export default function NosotrosSection() {
               })}
             </motion.div>
           </div>
-
-          {/* Image */}
-          <motion.div
-            className="relative"
-            initial={{ opacity: 0, x: 24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ type: 'spring', stiffness: 60, damping: 20, delay: 0.2 }}
-          >
-            <div className="relative rounded-2xl overflow-hidden border border-gold/20 shadow-[0_0_60px_rgba(201,168,106,0.1)]">
-              <Image
-                src="/images/limpieza-integral.jpg"
-                alt="Proceso de detailing integral en Benny's Auto Detail"
-                width={700}
-                height={500}
-                className="object-cover w-full"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
-            </div>
-            {/* Floating badge */}
-            <div className="absolute -bottom-5 -left-5 bg-surface border border-gold/25 rounded-2xl p-4 shadow-xl">
-              <p className="text-xs text-muted">Valoración media</p>
-              <p className="font-serif text-3xl font-bold text-gold-gradient">5.0★</p>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
