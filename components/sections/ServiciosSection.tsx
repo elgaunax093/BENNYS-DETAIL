@@ -132,7 +132,7 @@ export default function ServiciosSection() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="https://wa.me/34603768714"
+                href="https://wa.me/34603768714?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20vuestros%20servicios%20%F0%9F%9A%97"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-gold text-background font-semibold text-sm hover:bg-gold-light hover:shadow-[0_0_24px_rgba(201,168,106,0.4)] transition-all duration-300"

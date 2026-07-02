@@ -85,7 +85,7 @@ export default function HeroSection() {
             Llamar ahora
           </motion.a>
           <motion.a
-            href="https://wa.me/34603768714"
+            href="https://wa.me/34603768714?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20vuestros%20servicios%20%F0%9F%9A%97"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-gold/30 text-foreground backdrop-blur-md bg-white/5 font-semibold text-sm hover:border-gold hover:bg-white/10 hover:shadow-[0_0_20px_rgba(201,168,106,0.15)] transition-all duration-300"

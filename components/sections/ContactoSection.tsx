@@ -4,6 +4,22 @@ import { motion } from 'framer-motion'
 import { MapPin, Phone, Clock, MessageCircle, Send } from 'lucide-react'
 import SectionHeading from '../ui/SectionHeading'
 
+function WhatsAppIcon({ size = 16 }: { size?: number }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width={size} height={size} fill="currentColor" aria-hidden="true">
+      <path d="M16 0C7.163 0 0 7.163 0 16c0 2.82.736 5.469 2.027 7.77L0 32l8.43-2.007A15.93 15.93 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 01-6.77-1.856l-.486-.29-5.003 1.191 1.26-4.872-.32-.5A13.239 13.239 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.927c-.398-.2-2.355-1.162-2.72-1.295-.365-.133-.63-.2-.896.2-.266.398-1.03 1.295-1.263 1.56-.232.266-.465.3-.863.1-.398-.2-1.68-.619-3.2-1.975-1.182-1.055-1.98-2.358-2.213-2.756-.232-.398-.025-.613.175-.812.179-.178.398-.465.597-.697.2-.232.266-.398.398-.664.133-.265.067-.497-.033-.697-.1-.2-.896-2.158-1.228-2.956-.323-.776-.65-.671-.896-.683l-.764-.013c-.266 0-.697.1-1.063.497-.365.398-1.394 1.362-1.394 3.32s1.428 3.85 1.627 4.116c.2.265 2.81 4.29 6.81 6.018.952.412 1.695.658 2.274.842.955.304 1.824.261 2.512.158.766-.114 2.355-.963 2.688-1.893.332-.93.332-1.727.232-1.893-.1-.166-.365-.266-.763-.465z" />
+    </svg>
+  )
+}
+
+function InstagramIcon({ size = 16 }: { size?: number }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden="true">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+    </svg>
+  )
+}
+
 const horario = [
   { dia: 'Lunes', horas: '9:00–13:30 / 15:00–21:00' },
   { dia: 'Martes', horas: '9:00–13:30 / 15:00–21:00' },
@@ -143,41 +159,80 @@ export default function ContactoSection() {
             viewport={{ once: true }}
             transition={{ type: 'spring', stiffness: 60, damping: 20, delay: 0.1 }}
           >
-            {/* Contact cards */}
-            <div className="rounded-2xl border border-white/8 bg-background p-6 flex flex-col gap-4">
-              <a href="tel:+34603768714" className="flex items-center gap-4 group">
-                <div className="w-10 h-10 rounded-full border border-gold/30 bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
+            {/* Contact cards — stagger animated */}
+            <motion.div
+              className="rounded-2xl border border-white/8 bg-background p-6 flex flex-col"
+              variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {/* Teléfono */}
+              <motion.a
+                href="tel:+34603768714"
+                variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}
+                className="flex items-center gap-4 group py-3 border-b border-white/5"
+              >
+                <div className="w-10 h-10 rounded-full border border-gold/30 bg-gold/10 flex items-center justify-center shrink-0 group-hover:bg-gold/20 group-hover:shadow-[0_0_12px_rgba(201,168,106,0.3)] transition-all">
                   <Phone size={16} className="text-gold" />
                 </div>
                 <div>
                   <p className="text-xs text-muted">Teléfono</p>
                   <p className="text-sm font-semibold text-foreground group-hover:text-gold transition-colors">603 76 87 14</p>
                 </div>
-              </a>
-              <a
-                href="https://wa.me/34603768714"
+              </motion.a>
+
+              {/* WhatsApp */}
+              <motion.a
+                href="https://wa.me/34603768714?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20vuestros%20servicios%20%F0%9F%9A%97"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 group"
+                variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}
+                className="flex items-center gap-4 group py-3 border-b border-white/5"
               >
-                <div className="w-10 h-10 rounded-full border border-[#25D366]/30 bg-[#25D366]/10 flex items-center justify-center group-hover:bg-[#25D366]/20 transition-colors">
-                  <MessageCircle size={16} className="text-[#25D366]" />
+                <div className="w-10 h-10 rounded-full border border-[#25D366]/30 bg-[#25D366]/10 flex items-center justify-center shrink-0 group-hover:bg-[#25D366]/20 group-hover:shadow-[0_0_12px_rgba(37,211,102,0.3)] transition-all">
+                  <WhatsAppIcon size={16} />
                 </div>
                 <div>
                   <p className="text-xs text-muted">WhatsApp</p>
-                  <p className="text-sm font-semibold text-foreground group-hover:text-[#25D366] transition-colors">Escribirnos ahora</p>
+                  <p className="text-sm font-semibold text-foreground group-hover:text-[#25D366] transition-colors">Escríbenos por WhatsApp</p>
                 </div>
-              </a>
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full border border-gold/30 bg-gold/10 flex items-center justify-center shrink-0 mt-0.5">
+              </motion.a>
+
+              {/* Dirección → Google Maps */}
+              <motion.a
+                href="https://www.google.com/maps/dir/?api=1&destination=Calle+Aragon+Kalea+4+01003+Vitoria-Gasteiz+Alava+España"
+                target="_blank"
+                rel="noopener noreferrer"
+                variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}
+                className="flex items-start gap-4 group py-3 border-b border-white/5"
+              >
+                <div className="w-10 h-10 rounded-full border border-gold/30 bg-gold/10 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-gold/20 group-hover:shadow-[0_0_12px_rgba(201,168,106,0.3)] transition-all">
                   <MapPin size={16} className="text-gold" />
                 </div>
                 <div>
                   <p className="text-xs text-muted">Dirección</p>
-                  <p className="text-sm text-foreground">Calle Aragón Kalea, 4<br />01003 Vitoria-Gasteiz, Álava</p>
+                  <p className="text-sm text-foreground group-hover:text-gold transition-colors">Calle Aragón Kalea, 4<br />01003 Vitoria-Gasteiz, Álava</p>
                 </div>
-              </div>
-            </div>
+              </motion.a>
+
+              {/* Instagram */}
+              <motion.a
+                href="https://www.instagram.com/bennys.autodetail"
+                target="_blank"
+                rel="noopener noreferrer"
+                variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}
+                className="flex items-center gap-4 group py-3"
+              >
+                <div className="w-10 h-10 rounded-full border border-gold/30 bg-gold/10 flex items-center justify-center shrink-0 group-hover:bg-gold/20 group-hover:shadow-[0_0_12px_rgba(201,168,106,0.3)] transition-all">
+                  <InstagramIcon size={16} className="text-gold" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted">Instagram</p>
+                  <p className="text-sm font-semibold text-foreground group-hover:text-gold transition-colors">@bennys.autodetail</p>
+                </div>
+              </motion.a>
+            </motion.div>
 
             {/* Horario */}
             <div className="rounded-2xl border border-white/8 bg-background p-6">
@@ -220,7 +275,7 @@ export default function ContactoSection() {
                 Llamar ahora
               </a>
               <a
-                href="https://wa.me/34603768714"
+                href="https://wa.me/34603768714?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20vuestros%20servicios%20%F0%9F%9A%97"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 rounded-xl border border-[#25D366]/40 text-[#25D366] py-4 text-sm font-semibold hover:bg-[#25D366]/10 hover:border-[#25D366]/70 transition-all"

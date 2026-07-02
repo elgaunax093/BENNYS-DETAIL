@@ -89,7 +89,7 @@ export default function Navbar() {
               <span className="hidden xl:inline">603 76 87 14</span>
             </a>
             <a
-              href="https://wa.me/34603768714"
+              href="https://wa.me/34603768714?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20vuestros%20servicios%20%F0%9F%9A%97"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
@@ -165,7 +165,7 @@ export default function Navbar() {
                 <a href="tel:+34603768714" className="flex items-center gap-2 text-muted hover:text-foreground transition-colors text-sm">
                   <Phone size={15} className="text-gold" /> 603 76 87 14
                 </a>
-                <a href="https://wa.me/34603768714" target="_blank" rel="noopener noreferrer" className="text-[#25D366]" aria-label="WhatsApp">
+                <a href="https://wa.me/34603768714?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20vuestros%20servicios%20%F0%9F%9A%97" target="_blank" rel="noopener noreferrer" className="text-[#25D366]" aria-label="WhatsApp">
                   <WhatsAppIcon size={20} />
                 </a>
                 <a href="https://www.instagram.com/bennys.autodetail" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-gold transition-colors" aria-label="Instagram">
